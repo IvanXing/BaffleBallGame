@@ -16,14 +16,15 @@
     <script>
         var log = console.log.bind(console);
 
+        /** 传入path载入image方法 **/
         var imageFromPath = function(path){
             var img = new Image();
             img.src = path;
-            return img;
+            return img; 
         }
 
         var Paddle = function(){
-            var image = imageFromPath('paddle.jpg');
+            var image = imageFromPath('paddle.jpg');   // 载入image
             var o = {
                 image: image,
                 x: 100,
@@ -72,14 +73,10 @@
             return g;
         }
 
+        /** 定义主函数 **/
         var __main = function () {
             var game = GuaGame();
             var paddle = Paddle();
-
-           
-          
-          
-
             var leftDown = false;
             var rightDown = false;
            
@@ -120,6 +117,7 @@
 
         }
 
+        /** 主函数 **/
         __main();
     </script>
 </body>
